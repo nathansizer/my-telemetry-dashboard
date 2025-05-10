@@ -10,5 +10,7 @@ def load_session(year, gp, session_type):
     return session
 
 def get_driver_lap_telemetry(session, driver_code):
-    lap = session.laps.pick_driver(driver_code).pick_fastest()
-    return lap
+    lap = session.laps.pick_drivers(driver_code).pick_fastest()
+    car_data = lap.get_car_data()
+    telemetry = car_data.add_distance()
+    return telemetry

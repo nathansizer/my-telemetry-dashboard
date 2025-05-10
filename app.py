@@ -41,11 +41,11 @@ app.layout = html.Div([
 
 #callbacks to update the graph when the user changes things
 @app.callback(
-    Output('speed-trace', 'figure'),
+    Output('speed_trace', 'figure'),
     Input('year', 'value'),
     Input('gp', 'value'),
     Input('session', 'value'),
-    Input('drivers', 'value')
+    Input('drivers', 'value'),
 )
 def update_graph(year, gp, session, drivers):
     #try to update the graph, otherwise throw an error
@@ -56,7 +56,7 @@ def update_graph(year, gp, session, drivers):
         #get data for each driver selected
         for drivercode in drivers:
             telemetry = get_driver_lap_telemetry(ses, drivercode)
-            traces.append(go.Scatter(x=telemetry['Distance'], y=telemetry['Speed'], mode = "lines", name = drivercode))
+            traces.append(go.Scatter(x = telemetry['Distance'], y = telemetry['Speed'], mode = "lines", name = drivercode))
 
         #update the graph using the new date
         fig = go.Figure(data = traces)
@@ -71,4 +71,4 @@ def update_graph(year, gp, session, drivers):
 
 #run the app
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True)

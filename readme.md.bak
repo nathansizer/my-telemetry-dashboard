@@ -5,9 +5,13 @@ An interactive dashboard built with Python, using Dash and the FastF1 API to com
 ## Author:
 Nathan Sizer – [LinkedIn](https://www.linkedin.com/in/nathan-sizer)
 
-## Features
+## Features:
 - Select year, race weekend, and session
 - Compare speed traces of drivers' fastest laps in the selected session.
+
+##Notes:
+- If you get the below error message, your tab will probably say "Updating..." - just give it a minute and the page should then load :)
+![A common error message](assets/common_error.png)
 
 ### TODO:
 - Add screenshots above

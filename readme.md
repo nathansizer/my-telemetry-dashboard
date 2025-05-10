@@ -7,6 +7,9 @@ An interactive dashboard built with Dash and FastF1 to compare Formula 1 telemet
 - Compare speed traces of drivers' fastest laps
 - Powered by FastF1 and Plotly Dash
 
-TODO:
+## TODO:
 - Add screenshots below
 - Maybe host somewhere?
+
+## Author:
+Nathan Sizer – [LinkedIn](https://www.linkedin.com/in/nathan-sizer)

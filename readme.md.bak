@@ -9,7 +9,6 @@ An interactive dashboard built with Python, using Dash and the FastF1 API to com
 ## TODO:
 - Add screenshots below
 - Include more than the current 3 drivers
-- Maybe something which tracks laps through a race, tyre strategy etc.
 - Maybe host somewhere?
 
 ## Author:

@@ -12,7 +12,7 @@ app.layout = html.Div([
 
     #year dropdown menu, default to 2024 since it's most recent
     html.Label("Season"),
-    dcc.Dropdown(id = "year", options=[{'label': str(yr), 'value':yr} for yr in range(2021, 2024)], value = "2024"),
+    dcc.Dropdown(id = "year", options=[{'label': str(yr), 'value':yr} for yr in range(2021, 2025)], value = "2024"),
 
     #race weekend selection, default to Monza since it's a track everyone knows
     html.Label("Grand Prix"),
@@ -29,7 +29,9 @@ app.layout = html.Div([
         options = [
             {"label": "Max Verstappen", "value": "VER"},
             {'label': 'Lewis Hamilton', 'value': 'HAM'},
-            {'label': 'Charles Leclerc', 'value': 'LEC'}
+            {'label': 'Charles Leclerc', 'value': 'LEC'},
+            {'label': 'Lando Norris', 'value': 'NOR'},
+            {'label': 'Oscar Piastri', 'value': 'PIA'}
         ],
         multi = True,
         value = ["VER", "HAM"],

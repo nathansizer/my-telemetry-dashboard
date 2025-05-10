@@ -1,0 +1,4 @@
+dash
+fastf1
+pandas
+plotly

@@ -15,19 +15,25 @@ app.layout = html.Div([
     dcc.Dropdown(id = "year", options=[{'label': str(yr), 'value':yr} for yr in range(2021, 2025)], value = "2024"),
 
     #race weekend selection, default to Monza since it's a track everyone knows
-    html.Label("Grand Prix"),
+    html.Br(),
+    html.Label("Grand Prix "),
+    html.Br(),
     dcc.Input(id = "gp", type = "text", value = "Monza"),
 
     #session selection, default to Quali since it's the quickest
+    html.Br(),
+    html.Br(),
     html.Label("Session"),
     dcc.Dropdown(id = "session", options=[{"label": ss, "value": ss} for ss in ["FP1", "FP2", "FP3", "Q", "R"]], value = "Q"),
 
     #driver comparison dropdown, default to the best of friends
+    html.Br(),
     html.Label("Drivers to Compare"),
     dcc.Dropdown(
         id = "drivers",
         options = [
             {"label": "Max Verstappen", "value": "VER"},
+            {"label": "Sergio Perez", "value": "PER"},
             {'label': 'Lewis Hamilton', 'value': 'HAM'},
             {'label': 'Charles Leclerc', 'value': 'LEC'},
             {'label': 'Lando Norris', 'value': 'NOR'},
